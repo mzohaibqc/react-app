@@ -29,7 +29,7 @@ class CurrencyConverter extends Component {
       }
     ]
     let option = this.options[0]
-    this.state = {firstCurrency: option.first, secondCurrency: option.second, rate: option.rate, value: 0 }
+    this.state = {firstCurrency: option.first, secondCurrency: option.second, rate: option.rate, value: 1 }
   }
 
   onChangeFirst(event) {

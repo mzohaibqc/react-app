@@ -1,5 +1,18 @@
-body { padding-top: 70px; }
+body { 
+    padding-top: 70px;
+}
 
+* {
+    border-radius: 0 !important;
+}
+
+select {
+    border-radius: 0 !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
 
 
 /**

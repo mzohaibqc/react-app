@@ -10,7 +10,7 @@ class Card extends Component {
             <p className="card-text">{this.props.text}</p>
           </div>
           <div className="card-footer">
-            <a href="" className="btn btn-primary">Find Out More!</a>
+            Author : {this.props.author.name}
           </div>
         </div>
       </div>
