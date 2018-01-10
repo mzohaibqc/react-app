@@ -24,9 +24,15 @@ class Main extends Component {
   onChangeSearch(event) {
     let search = event.target.value
     this.setState({ search })
-    getPosts(search, this.state.authorId).then((posts) => {
-      this.setState({ posts })
-    })
+    if (this.timerId) {
+      clearTimeout(this.timerId)
+    }
+    this.timerId = setTimeout(() => {
+      getPosts(this.state.search, this.state.authorId).then((posts) => {
+        this.setState({ posts })
+        this.timerId = undefined;
+      })
+    }, 3000)
   }
 
   onChangeAuthor(event) {

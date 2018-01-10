@@ -10,10 +10,14 @@ export function getPosts(title='', authorId) {
   if (authorId) {
     query += ` userId: ${authorId}`
   }
+  if (query) {
+    query = `(${query})`
+  }
+
   return client.query({
     query: gql`
       query Posts {
-        posts (${query}) {
+        posts ${query} {
           id
           title
           body
