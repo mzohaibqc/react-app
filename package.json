@@ -15,6 +15,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && aws s3 sync build/ s3://zohaib-react-app --acl public-read"
+    "deploy": "npm run build && rm build/manifest.json build/service-worker.js build/asset-manifest.json && aws s3 sync build/ s3://zohaib-react-app --acl public-read && echo 'You can view deployed website here: http://zohaib-react-app.s3-website-us-east-1.amazonaws.com/'"
   }
 }

@@ -3,7 +3,7 @@ search string or by author.
 
 
 Here are commands available:
-You need nodejs ans npm for this project.
+You need nodejs and npm for this project.
 
 
 - Install dependencies: npm install
