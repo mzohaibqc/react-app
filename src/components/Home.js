@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 
 import Navbar from './Navbar'
 import Main from './Main'
-import Footer from './Footer'
 
-class App extends Component {
+class Home extends Component {
   constructor (props) {
     super(props)
     this.state = {}
@@ -12,13 +11,13 @@ class App extends Component {
   
   render() {
     return (
+
       <div>
-        <Navbar />
+        <Navbar path="/" />
         <Main posts={this.state.posts}/>
-        <Footer />
       </div>
     )
   }
 }
 
-export default App
+export default Home
